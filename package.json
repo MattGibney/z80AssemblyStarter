@@ -6,7 +6,7 @@
   "scripts": {
     "build": "z80asm -o bin/main.bin src/main.asm",
     "watch:build": "nodemon --watch src -e asm --exec npm run build",
-    "watch:test": "nodemon --watch src -e asm --exec 'npm run build && npm run test'",
+    "watch:test": "nodemon --watch src,test -e asm --exec 'npm run build && npm run test'",
     "test": "mocha"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Moppler/z80AssemblyStarter#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.18.11"
   }
